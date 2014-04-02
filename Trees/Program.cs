@@ -53,7 +53,7 @@ namespace Trees
 
             Console.WriteLine("Value to find: 100");
             Node<int> notFound = binaryTree.Find(100);
-            Console.WriteLine(nodeFound == null ? "Worked as expected" : "Failed");
+            Console.WriteLine(notFound == null ? "Worked as expected" : "Failed");
         }
     }
 }
