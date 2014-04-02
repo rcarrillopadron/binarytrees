@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.Remoting.Messaging;
 
 namespace Trees
 {
@@ -16,6 +17,16 @@ namespace Trees
             {
                 AddTo(Root, value);
             }
+        }
+
+        public Node<T> Find(T valueToFind)
+        {
+            return FindValue(Root, valueToFind);
+        }
+
+        private Node<T> FindValue(Node<T> node, T valueToFind)
+        {
+            throw new NotImplementedException();
         }
 
         private static void AddTo(Node<T> node, T value)

@@ -41,6 +41,19 @@ namespace Trees
             var postOrderTraversal = new PostOrderTraversal<int>();
             postOrderTraversal.Traverse(binaryTree.Root);
             Console.WriteLine();
+
+            Console.WriteLine("Value to find: 5");
+            Node<int> nodeFound = binaryTree.Find(5);
+            
+            if (nodeFound == null)
+                Console.WriteLine("Value not found");
+            else
+                Console.WriteLine("Value found: {0}", nodeFound.Value);
+            Console.WriteLine();
+
+            Console.WriteLine("Value to find: 100");
+            Node<int> notFound = binaryTree.Find(100);
+            Console.WriteLine(nodeFound == null ? "Worked as expected" : "Failed");
         }
     }
 }
